@@ -724,6 +724,443 @@
    ]
   },
   {
+   "code": "ADM-FND-01",
+   "title": "[ADM-FND-01] Configuration par environnement validée au démarrage (VITE_*)",
+   "labels": [
+    "admin",
+    "ci-cd",
+    "module:systeme",
+    "phase:0",
+    "priorite:P0",
+    "taille:S",
+    "type:infra"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "infra",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-02",
+   "title": "[ADM-FND-02] Architecture en couches api/hooks/components/pages et règles ESLint de frontières",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "phase:0",
+    "priorite:P0",
+    "taille:M",
+    "tests",
+    "type:infra"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "infra",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-03",
+   "title": "[ADM-FND-03] Table de routes unique, chargement paresseux par module et redirections post-connexion",
+   "labels": [
+    "admin",
+    "module:auth",
+    "module:systeme",
+    "performance",
+    "phase:0",
+    "priorite:P0",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "fonctionnel",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-04",
+   "title": "[ADM-FND-04] Client HTTP : enveloppe API, corrélation traceId, annulation et délais",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "phase:0",
+    "priorite:P0",
+    "security",
+    "taille:M",
+    "type:infra"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "infra",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-05",
+   "title": "[ADM-FND-05] QueryClient : fabrique de clés, staleTime par type de donnée et invalidations",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "performance",
+    "phase:0",
+    "priorite:P0",
+    "taille:M",
+    "type:infra"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "infra",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-06",
+   "title": "[ADM-FND-06] Types TypeScript générés depuis le contrat OpenAPI de l'API",
+   "labels": [
+    "admin",
+    "ci-cd",
+    "documentation",
+    "module:systeme",
+    "phase:0",
+    "priorite:P1",
+    "taille:M",
+    "type:infra"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "infra",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-07",
+   "title": "[ADM-FND-07] Frontières d'erreur par route, reprise après échec de chargement de chunk et erreurs non capturées",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "performance",
+    "phase:0",
+    "priorite:P0",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "fonctionnel",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-08",
+   "title": "[ADM-FND-08] Shell responsive tablette : sidebar rétractable, zone de contenu et tables à défilement contrôlé",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "phase:0",
+    "priorite:P1",
+    "taille:M",
+    "type:ux",
+    "ux-ui"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "ux",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-09",
+   "title": "[ADM-FND-09] Fournisseur de thème clair/sombre/système sans flash et compatible CSP",
+   "labels": [
+    "admin",
+    "module:design-system",
+    "module:systeme",
+    "phase:0",
+    "priorite:P0",
+    "taille:M",
+    "type:fonctionnel",
+    "ux-ui"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "fonctionnel",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-10",
+   "title": "[ADM-FND-10] Préférences d'interface persistées par administrateur (densité, filtres, raccourcis, sidebar)",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "phase:0",
+    "priorite:P1",
+    "taille:M",
+    "type:fonctionnel",
+    "ux-ui"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "fonctionnel",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-11",
+   "title": "[ADM-FND-11] Catalogue de textes FR figé : constantes centralisées et garde-fous de lint",
+   "labels": [
+    "admin",
+    "i18n",
+    "module:systeme",
+    "phase:0",
+    "priorite:P0",
+    "taille:L",
+    "type:i18n"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "i18n",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-12",
+   "title": "[ADM-FND-12] Formats français (nombres, dates, pourcentages) et messages Zod en français",
+   "labels": [
+    "admin",
+    "i18n",
+    "module:systeme",
+    "phase:0",
+    "priorite:P0",
+    "taille:M",
+    "type:i18n"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "i18n",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-13",
+   "title": "[ADM-FND-13] Export CSV : générateur RFC 4180, hook useExport et neutralisation des formules",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "phase:0",
+    "priorite:P0",
+    "rgpd",
+    "security",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "fonctionnel",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-14",
+   "title": "[ADM-FND-14] Export Excel (.xlsx) : génération paresseuse, feuilles formatées et limites",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "performance",
+    "phase:0",
+    "priorite:P1",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "fonctionnel",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-15",
+   "title": "[ADM-FND-15] Export PDF : rapports imprimables avec en-tête, tableaux et police Unicode",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "performance",
+    "phase:0",
+    "priorite:P2",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "fonctionnel",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-16",
+   "title": "[ADM-FND-16] Socle d'upload : primitive de dépôt, validations binaires, file d'envoi et empreinte",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "performance",
+    "phase:0",
+    "priorite:P0",
+    "security",
+    "taille:L",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "fonctionnel",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-17",
+   "title": "[ADM-FND-17] Vitest : couverture par couche (seuils du CDC), setup partagé et conventions de test",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "phase:0",
+    "priorite:P0",
+    "taille:M",
+    "tests",
+    "type:tests"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "tests",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-18",
+   "title": "[ADM-FND-18] Playwright : fixtures d'authentification par rôle, données de test et projets d'exécution",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "phase:0",
+    "priorite:P0",
+    "taille:M",
+    "tests",
+    "type:tests"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "tests",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-19",
+   "title": "[ADM-FND-19] Accessibilité automatisée en CI : axe, parcours clavier et politique d'exceptions",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "phase:0",
+    "priorite:P1",
+    "taille:M",
+    "tests",
+    "type:tests",
+    "ux-ui"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "tests",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-20",
+   "title": "[ADM-FND-20] Pipeline CI : jobs bloquants, e2e sur dev, budgets et vérifications transverses",
+   "labels": [
+    "admin",
+    "ci-cd",
+    "module:systeme",
+    "phase:0",
+    "priorite:P0",
+    "taille:M",
+    "tests",
+    "type:infra"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "infra",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-21",
+   "title": "[ADM-FND-21] Déploiement continu : staging sur dev, production sur main avec validation manuelle et smoke tests",
+   "labels": [
+    "admin",
+    "ci-cd",
+    "docker",
+    "module:systeme",
+    "phase:0",
+    "priorite:P1",
+    "taille:M",
+    "type:infra"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "infra",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-22",
+   "title": "[ADM-FND-22] Image Docker et nginx : en-têtes sur chaque location, cache, limites d'envoi et sondes",
+   "labels": [
+    "admin",
+    "docker",
+    "performance",
+    "phase:0",
+    "priorite:P0",
+    "security",
+    "taille:M",
+    "type:infra"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "infra",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-23",
+   "title": "[ADM-FND-23] CSP stricte, déploiement en Report-Only et en-têtes d'isolation",
+   "labels": [
+    "admin",
+    "docker",
+    "module:systeme",
+    "phase:0",
+    "priorite:P1",
+    "security",
+    "taille:M",
+    "type:securite"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "securite",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-24",
+   "title": "[ADM-FND-24] Journaux front structurés, remontée des erreurs et événements d'usage internes",
+   "labels": [
+    "admin",
+    "module:systeme",
+    "performance",
+    "phase:0",
+    "priorite:P1",
+    "security",
+    "taille:L",
+    "type:infra"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "infra",
+   "ecrans": []
+  },
+  {
+   "code": "ADM-FND-25",
+   "title": "[ADM-FND-25] Performance : budgets de bundle, découpage par route, chargement différé et Web Vitals",
+   "labels": [
+    "admin",
+    "ci-cd",
+    "module:systeme",
+    "performance",
+    "phase:0",
+    "priorite:P1",
+    "taille:M",
+    "type:performance"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "epic": "ADM-FND",
+   "type": "performance",
+   "ecrans": []
+  },
+  {
    "code": "ADM-WA-01",
    "title": "[ADM-WA-01] Client API d'authentification admin, schémas Zod et erreurs typées",
    "labels": [
@@ -3019,6 +3456,546 @@
    ]
   },
   {
+   "code": "ADM-WG-01",
+   "title": "[ADM-WG-01] Modèles TypeScript, schémas Zod et libellés de la modération (signalements, actions, groupes)",
+   "labels": [
+    "admin",
+    "module:communaute",
+    "module:moderation",
+    "phase:2",
+    "priorite:P0",
+    "taille:M",
+    "type:donnees"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "donnees",
+   "ecrans": [
+    "WG-01",
+    "WG-02",
+    "WG-04",
+    "WG-05"
+   ]
+  },
+  {
+   "code": "ADM-WG-02",
+   "title": "[ADM-WG-02] Client API admin de modération : signalements, actions, historique et groupes locaux",
+   "labels": [
+    "admin",
+    "module:communaute",
+    "module:moderation",
+    "phase:2",
+    "priorite:P0",
+    "taille:M",
+    "type:api"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "api",
+   "ecrans": [
+    "WG-01",
+    "WG-02",
+    "WG-03",
+    "WG-04",
+    "WG-05"
+   ]
+  },
+  {
+   "code": "ADM-WG-03",
+   "title": "[ADM-WG-03] Hooks TanStack Query de la modération : fraîcheur 30 s, invalidations et compteurs",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P0",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WG-01",
+    "WG-02",
+    "WG-05"
+   ]
+  },
+  {
+   "code": "ADM-WG-04",
+   "title": "[ADM-WG-04] File de signalements : en-tête et table (WG-01)",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P0",
+    "taille:L",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "ecran",
+   "ecrans": [
+    "WG-01"
+   ]
+  },
+  {
+   "code": "ADM-WG-05",
+   "title": "[ADM-WG-05] Badge de gravité automatique et mention « décision finale humaine »",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P0",
+    "taille:S",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "ecran",
+   "ecrans": [
+    "WG-01",
+    "WG-02"
+   ]
+  },
+  {
+   "code": "ADM-WG-06",
+   "title": "[ADM-WG-06] Onglets En attente / En cours / Traités / Ignorés et compteurs de la file",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P0",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WG-01",
+    "WG-07"
+   ]
+  },
+  {
+   "code": "ADM-WG-07",
+   "title": "[ADM-WG-07] Recherche et filtres de la file : type de contenu, gravité, période",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P1",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WG-01"
+   ]
+  },
+  {
+   "code": "ADM-WG-08",
+   "title": "[ADM-WG-08] Détail d'un signalement : en-tête, corps et zone d'actions (WG-02)",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P0",
+    "taille:L",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "ecran",
+   "ecrans": [
+    "WG-02"
+   ]
+  },
+  {
+   "code": "ADM-WG-09",
+   "title": "[ADM-WG-09] Contenu signalé et contexte de conversation, avec masquage du contenu sensible",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P0",
+    "security",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "ecran",
+   "ecrans": [
+    "WG-02",
+    "WG-01"
+   ]
+  },
+  {
+   "code": "ADM-WG-10",
+   "title": "[ADM-WG-10] Panneaux « Auteur du contenu » et « Rapporteur » (WG-02)",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P1",
+    "rgpd",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "ecran",
+   "ecrans": [
+    "WG-02"
+   ]
+  },
+  {
+   "code": "ADM-WG-11",
+   "title": "[ADM-WG-11] Navigation précédent / suivant entre signalements de la file",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P2",
+    "taille:S",
+    "type:fonctionnel",
+    "ux-ui"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WG-02"
+   ]
+  },
+  {
+   "code": "ADM-WG-12",
+   "title": "[ADM-WG-12] Actions Ignorer, Masquer le contenu et Avertir sur un signalement",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P0",
+    "security",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WG-02"
+   ]
+  },
+  {
+   "code": "ADM-WG-13",
+   "title": "[ADM-WG-13] Modale « Bannir définitivement » : gravité retenue et justification obligatoire (WG-03)",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P0",
+    "security",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "ecran",
+   "ecrans": [
+    "WG-03"
+   ]
+  },
+  {
+   "code": "ADM-WG-14",
+   "title": "[ADM-WG-14] Action Suspendre : durée, gravité et justification obligatoire",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P0",
+    "security",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WG-02",
+    "WG-03"
+   ]
+  },
+  {
+   "code": "ADM-WG-15",
+   "title": "[ADM-WG-15] Calcul et affichage du rang de récidive et de la suggestion du barème",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P1",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WG-02",
+    "WG-03",
+    "WG-06"
+   ]
+  },
+  {
+   "code": "ADM-WG-16",
+   "title": "[ADM-WG-16] Historique de modération d'un utilisateur : en-tête et indicateurs (WG-04)",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P0",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "ecran",
+   "ecrans": [
+    "WG-04"
+   ]
+  },
+  {
+   "code": "ADM-WG-17",
+   "title": "[ADM-WG-17] Chronologie des décisions de modération d'un utilisateur",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P1",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "ecran",
+   "ecrans": [
+    "WG-04"
+   ]
+  },
+  {
+   "code": "ADM-WG-18",
+   "title": "[ADM-WG-18] Gestion des groupes locaux : en-tête, onglets et table (WG-05)",
+   "labels": [
+    "admin",
+    "module:communaute",
+    "module:moderation",
+    "phase:2",
+    "priorite:P1",
+    "taille:L",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "ecran",
+   "ecrans": [
+    "WG-05"
+   ]
+  },
+  {
+   "code": "ADM-WG-19",
+   "title": "[ADM-WG-19] Valider ou refuser la création d'un groupe local",
+   "labels": [
+    "admin",
+    "module:communaute",
+    "module:moderation",
+    "phase:2",
+    "priorite:P1",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WG-05"
+   ]
+  },
+  {
+   "code": "ADM-WG-20",
+   "title": "[ADM-WG-20] Règle de validation des groupes : consultation et seuil configurable",
+   "labels": [
+    "admin",
+    "module:communaute",
+    "module:moderation",
+    "phase:2",
+    "priorite:P2",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WG-05"
+   ]
+  },
+  {
+   "code": "ADM-WG-21",
+   "title": "[ADM-WG-21] Gérer un groupe actif : archivage et restauration",
+   "labels": [
+    "admin",
+    "module:communaute",
+    "module:moderation",
+    "phase:2",
+    "priorite:P2",
+    "taille:S",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WG-05"
+   ]
+  },
+  {
+   "code": "ADM-WG-22",
+   "title": "[ADM-WG-22] Écran Barème de sanctions : tableau de référence et notes (WG-06)",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P1",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "ecran",
+   "ecrans": [
+    "WG-06"
+   ]
+  },
+  {
+   "code": "ADM-WG-23",
+   "title": "[ADM-WG-23] File de modération vide : état « File vide, bravo ! » (WG-07)",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P1",
+    "taille:S",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "ecran",
+   "ecrans": [
+    "WG-07"
+   ]
+  },
+  {
+   "code": "ADM-WG-24",
+   "title": "[ADM-WG-24] Raccourcis clavier des modérateurs et aide « Raccourcis clavier »",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P2",
+    "taille:S",
+    "type:fonctionnel",
+    "ux-ui"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WG-01",
+    "WG-02"
+   ]
+  },
+  {
+   "code": "ADM-WG-25",
+   "title": "[ADM-WG-25] Rafraîchissement automatique de la file et alerte de nouveaux signalements urgents",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "performance",
+    "phase:2",
+    "priorite:P1",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WG-01",
+    "WG-07"
+   ]
+  },
+  {
+   "code": "ADM-WG-26",
+   "title": "[ADM-WG-26] RBAC et journal d'audit immuable du module modération",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P0",
+    "rgpd",
+    "security",
+    "taille:M",
+    "type:securite"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "securite",
+   "ecrans": [
+    "WG-01",
+    "WG-02",
+    "WG-03",
+    "WG-05"
+   ]
+  },
+  {
+   "code": "ADM-WG-27",
+   "title": "[ADM-WG-27] Tests E2E et d'accessibilité du module modération communautaire",
+   "labels": [
+    "admin",
+    "module:moderation",
+    "phase:2",
+    "priorite:P1",
+    "taille:M",
+    "tests",
+    "type:tests"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "epic": "ADM-WG",
+   "type": "tests",
+   "ecrans": [
+    "WG-01",
+    "WG-02",
+    "WG-03",
+    "WG-04",
+    "WG-05",
+    "WG-06",
+    "WG-07"
+   ]
+  },
+  {
    "code": "ADM-WH-01",
    "title": "[ADM-WH-01] Couche api/hooks du module observabilité (santé, files, logs, IA, audit)",
    "labels": [
@@ -4048,6 +5025,43 @@
    ]
   },
   {
+   "code": "ADM-FND",
+   "title": "[ADM-FND] Épopée — Socle technique admin",
+   "labels": [
+    "admin",
+    "epic",
+    "phase:0"
+   ],
+   "milestone": "Phase 0 — Socle technique",
+   "children": [
+    "ADM-FND-01",
+    "ADM-FND-02",
+    "ADM-FND-03",
+    "ADM-FND-04",
+    "ADM-FND-05",
+    "ADM-FND-06",
+    "ADM-FND-07",
+    "ADM-FND-08",
+    "ADM-FND-09",
+    "ADM-FND-10",
+    "ADM-FND-11",
+    "ADM-FND-12",
+    "ADM-FND-13",
+    "ADM-FND-14",
+    "ADM-FND-15",
+    "ADM-FND-16",
+    "ADM-FND-17",
+    "ADM-FND-18",
+    "ADM-FND-19",
+    "ADM-FND-20",
+    "ADM-FND-21",
+    "ADM-FND-22",
+    "ADM-FND-23",
+    "ADM-FND-24",
+    "ADM-FND-25"
+   ]
+  },
+  {
    "code": "ADM-WA",
    "title": "[ADM-WA] Épopée — Authentification et erreurs",
    "labels": [
@@ -4231,6 +5245,45 @@
     "ADM-WF-21",
     "ADM-WF-22",
     "ADM-WF-23"
+   ]
+  },
+  {
+   "code": "ADM-WG",
+   "title": "[ADM-WG] Épopée — Modération communautaire",
+   "labels": [
+    "admin",
+    "epic",
+    "phase:2"
+   ],
+   "milestone": "Phase 2 — Communautaire & compétitif",
+   "children": [
+    "ADM-WG-01",
+    "ADM-WG-02",
+    "ADM-WG-03",
+    "ADM-WG-04",
+    "ADM-WG-05",
+    "ADM-WG-06",
+    "ADM-WG-07",
+    "ADM-WG-08",
+    "ADM-WG-09",
+    "ADM-WG-10",
+    "ADM-WG-11",
+    "ADM-WG-12",
+    "ADM-WG-13",
+    "ADM-WG-14",
+    "ADM-WG-15",
+    "ADM-WG-16",
+    "ADM-WG-17",
+    "ADM-WG-18",
+    "ADM-WG-19",
+    "ADM-WG-20",
+    "ADM-WG-21",
+    "ADM-WG-22",
+    "ADM-WG-23",
+    "ADM-WG-24",
+    "ADM-WG-25",
+    "ADM-WG-26",
+    "ADM-WG-27"
    ]
   },
   {
