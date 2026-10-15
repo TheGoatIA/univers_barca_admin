@@ -25,7 +25,7 @@ _Module : Comptes, configuration et notifications_
 
 </details>
 
-**Issues liées sur ce même écran :** [ADM-WI-08](https://github.com/TheGoatIA/univers_barca_admin/issues?q=is%3Aissue%20%22%5BADM-WI-08%5D%22)
+**Issues liées sur ce même écran :** [ADM-WI-08](https://github.com/TheGoatIA/univers_barca_admin/issues?q=is%3Aissue%20%22%5BADM-WI-08%5D%22) · [API-PLAT-19](https://github.com/TheGoatIA/univers_barca_api/issues?q=is%3Aissue%20%22%5BAPI-PLAT-19%5D%22)
 
 ## 📐 Règles de gestion
 

@@ -1438,6 +1438,571 @@
    ]
   },
   {
+   "code": "ADM-WC-01",
+   "title": "[ADM-WC-01] Modèles TypeScript, schémas Zod et libellés des fiches joueurs (admin)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "module:football-data",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:donnees"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "donnees",
+   "ecrans": [
+    "WC-01",
+    "WC-05"
+   ]
+  },
+  {
+   "code": "ADM-WC-02",
+   "title": "[ADM-WC-02] Client API admin des joueurs (liste, détail, création, édition, statistiques, actions de masse)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "module:football-data",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:api"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "api",
+   "ecrans": [
+    "WC-01",
+    "WC-02",
+    "WC-05",
+    "WC-08",
+    "WC-11"
+   ]
+  },
+  {
+   "code": "ADM-WC-03",
+   "title": "[ADM-WC-03] Hooks TanStack Query du module joueurs : clés, cache et invalidations",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WC-01",
+    "WC-05",
+    "WC-08"
+   ]
+  },
+  {
+   "code": "ADM-WC-04",
+   "title": "[ADM-WC-04] Liste des joueurs : en-tête, barre d'outils et table (refonte fidèle WC-01)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "taille:L",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "ecran",
+   "ecrans": [
+    "WC-01"
+   ]
+  },
+  {
+   "code": "ADM-WC-05",
+   "title": "[ADM-WC-05] Recherche et filtres avancés des joueurs persistés dans l'URL",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WC-01",
+    "WC-03"
+   ]
+  },
+  {
+   "code": "ADM-WC-06",
+   "title": "[ADM-WC-06] Tri serveur, pagination 50 lignes et mode dense de la liste des joueurs",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "performance",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WC-01"
+   ]
+  },
+  {
+   "code": "ADM-WC-07",
+   "title": "[ADM-WC-07] Liste des joueurs : état « aucun résultat pour ces filtres » et état « aucune donnée »",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:S",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "ecran",
+   "ecrans": [
+    "WC-03",
+    "WC-04"
+   ]
+  },
+  {
+   "code": "ADM-WC-08",
+   "title": "[ADM-WC-08] Sélection multiple et barre d'actions de masse de la liste des joueurs",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "ecran",
+   "ecrans": [
+    "WC-02"
+   ]
+  },
+  {
+   "code": "ADM-WC-09",
+   "title": "[ADM-WC-09] Publication en masse des fiches prêtes avec rapport par fiche",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "security",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WC-02"
+   ]
+  },
+  {
+   "code": "ADM-WC-10",
+   "title": "[ADM-WC-10] Archivage groupé : boîte de confirmation et exécution",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "ecran",
+   "ecrans": [
+    "WC-12"
+   ]
+  },
+  {
+   "code": "ADM-WC-11",
+   "title": "[ADM-WC-11] Export CSV/Excel de la liste des joueurs (filtres courants ou sélection)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "rgpd",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WC-01",
+    "WC-02"
+   ]
+  },
+  {
+   "code": "ADM-WC-12",
+   "title": "[ADM-WC-12] Import CSV de fiches joueurs depuis la liste (création de brouillons)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P2",
+    "security",
+    "taille:L",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WC-01",
+    "WC-04"
+   ]
+  },
+  {
+   "code": "ADM-WC-13",
+   "title": "[ADM-WC-13] Fiche joueur : en-tête, onglets et barre d'actions (structure commune WC-05 à WC-11)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "taille:L",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "ecran",
+   "ecrans": [
+    "WC-05",
+    "WC-06",
+    "WC-07",
+    "WC-08",
+    "WC-09"
+   ]
+  },
+  {
+   "code": "ADM-WC-14",
+   "title": "[ADM-WC-14] Onglet Identité : formulaire des informations du joueur (WC-05)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "ecran",
+   "ecrans": [
+    "WC-05"
+   ]
+  },
+  {
+   "code": "ADM-WC-15",
+   "title": "[ADM-WC-15] Règles de validation Zod de l'identité d'un joueur et mappage des erreurs serveur",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "taille:S",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WC-05"
+   ]
+  },
+  {
+   "code": "ADM-WC-16",
+   "title": "[ADM-WC-16] Création d'un joueur : bouton « Nouveau joueur » et fiche vierge",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "ecran",
+   "ecrans": [
+    "WC-01",
+    "WC-04",
+    "WC-05"
+   ]
+  },
+  {
+   "code": "ADM-WC-17",
+   "title": "[ADM-WC-17] Colonne latérale : workflow de publication en 5 étapes et checklist de complétion",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "ecran",
+   "ecrans": [
+    "WC-05",
+    "WC-06",
+    "WC-07",
+    "WC-08",
+    "WC-09"
+   ]
+  },
+  {
+   "code": "ADM-WC-18",
+   "title": "[ADM-WC-18] Onglet Biographie : éditeur trilingue FR/EN/ES et bandeau « Publication bloquée »",
+   "labels": [
+    "admin",
+    "i18n",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "ecran",
+   "ecrans": [
+    "WC-06",
+    "WC-07"
+   ]
+  },
+  {
+   "code": "ADM-WC-19",
+   "title": "[ADM-WC-19] Publication d'une fiche : boîte de confirmation et règles bloquantes",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "security",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "ecran",
+   "ecrans": [
+    "WC-10",
+    "WC-06",
+    "WC-07"
+   ]
+  },
+  {
+   "code": "ADM-WC-20",
+   "title": "[ADM-WC-20] Onglet Statistiques par saison : tableau éditable (WC-08)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "ecran",
+   "ecrans": [
+    "WC-08"
+   ]
+  },
+  {
+   "code": "ADM-WC-21",
+   "title": "[ADM-WC-21] Édition des statistiques : validation, enregistrement groupé (PUT) et cohérence",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WC-08"
+   ]
+  },
+  {
+   "code": "ADM-WC-22",
+   "title": "[ADM-WC-22] Tiroir « Importer des statistiques (CSV) » : dépôt, rapport et confirmation (WC-11)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "ecran",
+   "ecrans": [
+    "WC-11"
+   ]
+  },
+  {
+   "code": "ADM-WC-23",
+   "title": "[ADM-WC-23] Import CSV des statistiques : parsing, règles de validation et dry-run serveur",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "security",
+    "taille:L",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WC-11",
+    "WC-08"
+   ]
+  },
+  {
+   "code": "ADM-WC-24",
+   "title": "[ADM-WC-24] Onglet Photo : zone de dépôt, aperçu et rappel de droits (WC-09)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "ecran",
+   "ecrans": [
+    "WC-09"
+   ]
+  },
+  {
+   "code": "ADM-WC-25",
+   "title": "[ADM-WC-25] Photo joueur : validation locale, téléversement et rattachement à la fiche",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "performance",
+    "phase:1",
+    "priorite:P1",
+    "security",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WC-09"
+   ]
+  },
+  {
+   "code": "ADM-WC-26",
+   "title": "[ADM-WC-26] Garde des modifications non enregistrées, brouillon local et conflit d'édition concurrente",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:fonctionnel",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WC-05",
+    "WC-06",
+    "WC-08"
+   ]
+  },
+  {
+   "code": "ADM-WC-27",
+   "title": "[ADM-WC-27] RBAC et piste d'audit du module joueurs",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "security",
+    "taille:S",
+    "type:securite"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "securite",
+   "ecrans": [
+    "WC-01",
+    "WC-05",
+    "WC-10"
+   ]
+  },
+  {
+   "code": "ADM-WC-28",
+   "title": "[ADM-WC-28] Tests E2E et d'accessibilité du module joueurs",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "tests",
+    "type:tests"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WC",
+   "type": "tests",
+   "ecrans": [
+    "WC-01",
+    "WC-02",
+    "WC-05",
+    "WC-07",
+    "WC-10",
+    "WC-12"
+   ]
+  },
+  {
    "code": "ADM-WD-01",
    "title": "[ADM-WD-01] Couche données Matchs : types Zod, client axios et hooks TanStack Query",
    "labels": [
@@ -1995,6 +2560,462 @@
     "WE-02",
     "WE-03",
     "WE-04"
+   ]
+  },
+  {
+   "code": "ADM-WF-01",
+   "title": "[ADM-WF-01] Modèles TypeScript, schémas Zod et libellés des questions de quiz",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "module:jeux",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:donnees"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "donnees",
+   "ecrans": [
+    "WF-01",
+    "WF-02"
+   ]
+  },
+  {
+   "code": "ADM-WF-02",
+   "title": "[ADM-WF-02] Client API admin des questions de quiz (CRUD, file IA, approbation, rejet, statistiques)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "module:jeux",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:api"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "api",
+   "ecrans": [
+    "WF-01",
+    "WF-02",
+    "WF-03",
+    "WF-04",
+    "WF-05"
+   ]
+  },
+  {
+   "code": "ADM-WF-03",
+   "title": "[ADM-WF-03] Hooks TanStack Query du module quiz : clés, staleTime et invalidations",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WF-01",
+    "WF-03",
+    "WF-04"
+   ]
+  },
+  {
+   "code": "ADM-WF-04",
+   "title": "[ADM-WF-04] Liste des questions : en-tête, filtres et table (WF-01)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "taille:L",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "ecran",
+   "ecrans": [
+    "WF-01"
+   ]
+  },
+  {
+   "code": "ADM-WF-05",
+   "title": "[ADM-WF-05] Recherche et filtres des questions (niveau, catégorie, statut, plage de réussite) dans l'URL",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WF-01"
+   ]
+  },
+  {
+   "code": "ADM-WF-06",
+   "title": "[ADM-WF-06] Compteur de questions en attente : sous-titres, bouton, badge de sidebar et indicateur de charge",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:S",
+    "type:fonctionnel",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WF-01",
+    "WF-03"
+   ]
+  },
+  {
+   "code": "ADM-WF-07",
+   "title": "[ADM-WF-07] Éditeur de question : structure de page et énoncé trilingue (WF-02)",
+   "labels": [
+    "admin",
+    "i18n",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "taille:L",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "ecran",
+   "ecrans": [
+    "WF-02"
+   ]
+  },
+  {
+   "code": "ADM-WF-08",
+   "title": "[ADM-WF-08] Éditeur de réponses : 4 options trilingues et choix de la bonne réponse",
+   "labels": [
+    "admin",
+    "i18n",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WF-02"
+   ]
+  },
+  {
+   "code": "ADM-WF-09",
+   "title": "[ADM-WF-09] Panneaux Paramètres et Performance de l'éditeur (WF-02)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "ecran",
+   "ecrans": [
+    "WF-02"
+   ]
+  },
+  {
+   "code": "ADM-WF-10",
+   "title": "[ADM-WF-10] Workflow de statut d'une question et règles de publication trilingue",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "security",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WF-01",
+    "WF-02"
+   ]
+  },
+  {
+   "code": "ADM-WF-11",
+   "title": "[ADM-WF-11] Création, duplication et archivage d'une question depuis la liste",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "ecran",
+   "ecrans": [
+    "WF-01",
+    "WF-02"
+   ]
+  },
+  {
+   "code": "ADM-WF-12",
+   "title": "[ADM-WF-12] File de validation des questions générées par IA : page et cartes (WF-03)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "module:ia",
+    "phase:1",
+    "priorite:P0",
+    "taille:L",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "ecran",
+   "ecrans": [
+    "WF-03"
+   ]
+  },
+  {
+   "code": "ADM-WF-13",
+   "title": "[ADM-WF-13] Actions Approuver et Rejeter : règles, états et journalisation",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "module:ia",
+    "phase:1",
+    "priorite:P0",
+    "security",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WF-03",
+    "WF-05"
+   ]
+  },
+  {
+   "code": "ADM-WF-14",
+   "title": "[ADM-WF-14] Corriger puis approuver : correction d'une question IA avant publication",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "module:ia",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WF-03"
+   ]
+  },
+  {
+   "code": "ADM-WF-15",
+   "title": "[ADM-WF-15] « Approuver la sélection » : sélection de cartes et approbation en lot",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "module:ia",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WF-03"
+   ]
+  },
+  {
+   "code": "ADM-WF-16",
+   "title": "[ADM-WF-16] Modale « Rejeter cette question ? » : motifs et commentaire (WF-05)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "module:ia",
+    "phase:1",
+    "priorite:P0",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "ecran",
+   "ecrans": [
+    "WF-05"
+   ]
+  },
+  {
+   "code": "ADM-WF-17",
+   "title": "[ADM-WF-17] Raccourcis clavier de la file de validation (A, C, R, J/K)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P2",
+    "taille:S",
+    "type:fonctionnel",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WF-03",
+    "WF-05"
+   ]
+  },
+  {
+   "code": "ADM-WF-18",
+   "title": "[ADM-WF-18] Écran Performance des questions : en-tête et quatre indicateurs (WF-04)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "ecran",
+   "ecrans": [
+    "WF-04"
+   ]
+  },
+  {
+   "code": "ADM-WF-19",
+   "title": "[ADM-WF-19] Histogramme « Répartition du taux de réussite » (Recharts)",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:ecran",
+    "ux-ui"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "ecran",
+   "ecrans": [
+    "WF-04"
+   ]
+  },
+  {
+   "code": "ADM-WF-20",
+   "title": "[ADM-WF-20] Liste « À corriger en priorité » : questions mal calibrées ou ambiguës",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WF-04"
+   ]
+  },
+  {
+   "code": "ADM-WF-21",
+   "title": "[ADM-WF-21] Export CSV/Excel des statistiques de performance des questions",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P2",
+    "taille:S",
+    "type:fonctionnel"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "fonctionnel",
+   "ecrans": [
+    "WF-04",
+    "WF-01"
+   ]
+  },
+  {
+   "code": "ADM-WF-22",
+   "title": "[ADM-WF-22] RBAC et piste d'audit du module questions de quiz",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P0",
+    "security",
+    "taille:S",
+    "type:securite"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "securite",
+   "ecrans": [
+    "WF-01",
+    "WF-03",
+    "WF-05"
+   ]
+  },
+  {
+   "code": "ADM-WF-23",
+   "title": "[ADM-WF-23] Tests E2E et d'accessibilité du module questions de quiz",
+   "labels": [
+    "admin",
+    "module:contenu",
+    "phase:1",
+    "priorite:P1",
+    "taille:M",
+    "tests",
+    "type:tests"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "epic": "ADM-WF",
+   "type": "tests",
+   "ecrans": [
+    "WF-01",
+    "WF-02",
+    "WF-03",
+    "WF-04",
+    "WF-05"
    ]
   },
   {
@@ -3086,6 +4107,46 @@
    ]
   },
   {
+   "code": "ADM-WC",
+   "title": "[ADM-WC] Épopée — Gestion des joueurs",
+   "labels": [
+    "admin",
+    "epic",
+    "phase:1"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "children": [
+    "ADM-WC-01",
+    "ADM-WC-02",
+    "ADM-WC-03",
+    "ADM-WC-04",
+    "ADM-WC-05",
+    "ADM-WC-06",
+    "ADM-WC-07",
+    "ADM-WC-08",
+    "ADM-WC-09",
+    "ADM-WC-10",
+    "ADM-WC-11",
+    "ADM-WC-12",
+    "ADM-WC-13",
+    "ADM-WC-14",
+    "ADM-WC-15",
+    "ADM-WC-16",
+    "ADM-WC-17",
+    "ADM-WC-18",
+    "ADM-WC-19",
+    "ADM-WC-20",
+    "ADM-WC-21",
+    "ADM-WC-22",
+    "ADM-WC-23",
+    "ADM-WC-24",
+    "ADM-WC-25",
+    "ADM-WC-26",
+    "ADM-WC-27",
+    "ADM-WC-28"
+   ]
+  },
+  {
    "code": "ADM-WD",
    "title": "[ADM-WD] Épopée — Matchs et compétitions",
    "labels": [
@@ -3135,6 +4196,41 @@
     "ADM-WE-12",
     "ADM-WE-13",
     "ADM-WE-14"
+   ]
+  },
+  {
+   "code": "ADM-WF",
+   "title": "[ADM-WF] Épopée — Questions de quiz",
+   "labels": [
+    "admin",
+    "epic",
+    "phase:1"
+   ],
+   "milestone": "Phase 1 — MVP",
+   "children": [
+    "ADM-WF-01",
+    "ADM-WF-02",
+    "ADM-WF-03",
+    "ADM-WF-04",
+    "ADM-WF-05",
+    "ADM-WF-06",
+    "ADM-WF-07",
+    "ADM-WF-08",
+    "ADM-WF-09",
+    "ADM-WF-10",
+    "ADM-WF-11",
+    "ADM-WF-12",
+    "ADM-WF-13",
+    "ADM-WF-14",
+    "ADM-WF-15",
+    "ADM-WF-16",
+    "ADM-WF-17",
+    "ADM-WF-18",
+    "ADM-WF-19",
+    "ADM-WF-20",
+    "ADM-WF-21",
+    "ADM-WF-22",
+    "ADM-WF-23"
    ]
   },
   {

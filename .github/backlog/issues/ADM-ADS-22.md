@@ -23,6 +23,8 @@ _Module : Retours et états_
 
 </details>
 
+**Issues liées sur ce même écran :** [MOB-ZC-14](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZC-14%5D%22) · [MOB-ZC-15](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZC-15%5D%22) · [MOB-ZC-16](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZC-16%5D%22) · [MOB-ZC-17](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZC-17%5D%22)
+
 ## 📐 Règles de gestion
 
 - Palette catégorielle : garnet, navy, or, vert, gris (clair/sombre) ; comparaison toujours doublée d'un style de trait ou motif.

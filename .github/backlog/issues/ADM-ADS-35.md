@@ -25,6 +25,8 @@ _Module : Composants métier et responsive_
 
 </details>
 
+**Issues liées sur ce même écran :** [MOB-ZD-01](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZD-01%5D%22) · [MOB-ZD-02](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZD-02%5D%22) · [MOB-ZD-03](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZD-03%5D%22) · [MOB-ZD-04](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZD-04%5D%22)
+
 #### `ZD-02` — Carte communautaire, chat et calendrier
 _Module : Composants métier et responsive_
 
@@ -37,6 +39,8 @@ _Module : Composants métier et responsive_
 **Composants repérés** : `btn`, `card`
 
 </details>
+
+**Issues liées sur ce même écran :** [MOB-ZD-05](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZD-05%5D%22) · [MOB-ZD-06](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZD-06%5D%22) · [MOB-ZD-07](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZD-07%5D%22)
 
 ## 📐 Règles de gestion
 

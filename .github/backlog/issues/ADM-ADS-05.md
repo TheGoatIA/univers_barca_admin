@@ -23,6 +23,8 @@ _Module : Fondations_
 
 </details>
 
+**Issues liées sur ce même écran :** [MOB-ZA-11](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZA-11%5D%22) · [MOB-ZA-12](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZA-12%5D%22) · [MOB-ZA-13](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZA-13%5D%22) · [MOB-ZA-14](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZA-14%5D%22)
+
 ## 📐 Règles de gestion
 
 - Grille 24 px, trait 1,8 px, extrémités arrondies : `strokeWidth={1.8}` par défaut.

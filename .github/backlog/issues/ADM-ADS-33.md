@@ -23,6 +23,8 @@ _Module : Animations et micro-interactions_
 
 </details>
 
+**Issues liées sur ce même écran :** [MOB-ZC-09](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZC-09%5D%22) · [MOB-ZE-11](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZE-11%5D%22) · [MOB-ZE-12](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZE-12%5D%22) · [MOB-ZE-18](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZE-18%5D%22)
+
 ## 📐 Règles de gestion
 
 - Cibles ≥ 44 × 44 pt et espacement ≥ 8 px entre cibles sur tablette.

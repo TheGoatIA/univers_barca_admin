@@ -25,6 +25,8 @@ _Module : Composants métier et responsive_
 
 </details>
 
+**Issues liées sur ce même écran :** [MOB-ZA-16](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZA-16%5D%22) · [MOB-ZD-13](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZD-13%5D%22) · [MOB-ZD-14](https://github.com/TheGoatIA/univers_barca_mobile/issues?q=is%3Aissue%20%22%5BMOB-ZD-14%5D%22)
+
 ## 📐 Règles de gestion
 
 - Variables CSS `--dur-instant:100ms`, `--dur-fast:180ms`, `--dur-std:280ms`, `--dur-expressive:480ms`, `--ease-std`, `--ease-out`.
