@@ -44,6 +44,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
+          BACKLOG_ASSIGNEE: BorisGautier
+          PROJECT_PAT: ${{ secrets.PROJECT_PAT }}
+          PROJECT_NUMBER: ${{ vars.PROJECT_NUMBER }}
         run: |
           DRY="${{ inputs.dry_run }}"; ONLY="${{ inputs.only }}"; LIMIT="${{ inputs.limit }}"
           if [ "${{ github.event_name }}" = "push" ]; then
