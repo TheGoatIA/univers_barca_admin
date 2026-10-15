@@ -3,10 +3,10 @@ name: CodeQL (qualité & sécurité du code)
 on:
   push:
     branches: [main, dev]
-    paths-ignore: ['docs/maquettes/**', '.github/backlog/**']
+    paths-ignore: ["docs/maquettes/**", ".github/backlog/**"]
   pull_request:
     branches: [main, dev]
-    paths-ignore: ['docs/maquettes/**', '.github/backlog/**']
+    paths-ignore: ["docs/maquettes/**", ".github/backlog/**"]
   schedule:
     - cron: "17 4 * * 1"
 

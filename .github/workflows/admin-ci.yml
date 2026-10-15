@@ -3,7 +3,7 @@ name: Admin CI
 on:
   pull_request:
     branches: [dev, main]
-    paths-ignore: ['docs/maquettes/**', '.github/backlog/**']
+    paths-ignore: ["docs/maquettes/**", ".github/backlog/**"]
 
 permissions:
   contents: read
