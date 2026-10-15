@@ -12,7 +12,7 @@ export const Sidebar = () => {
       aria-label="Navigation principale"
     >
       <div className="flex h-16 items-center gap-3 border-b border-line px-5">
-        <div className="size-9 rounded-md" style={{ background: 'var(--hero)' }} aria-hidden />
+        <img src="/logo.png" alt="Écusson" className="size-10 object-contain" />
         <span className="font-title text-xl font-bold uppercase leading-none">
           Univers Barça
           <small className="block text-[11px] font-semibold tracking-widest text-content-2">

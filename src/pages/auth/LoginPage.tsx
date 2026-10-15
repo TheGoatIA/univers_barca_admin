@@ -65,6 +65,7 @@ export default function LoginPage() {
         noValidate
       >
         <div>
+          <img src="/logo.png" alt="Univers Barça" className="mb-4 size-16 object-contain" />
           <h1 className="text-4xl">Connexion</h1>
           <p className="mt-2 text-content-2">Back-office Univers Barça — accès réservé.</p>
         </div>
