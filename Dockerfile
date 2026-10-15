@@ -11,7 +11,7 @@ ENV VITE_API_URL=$VITE_API_URL VITE_ENV=$VITE_ENV
 RUN npm run build
 
 # ─── Stage 2 : serveur statique nginx (non-root) ──────────────────────────────────────
-FROM nginxinc/nginx-unprivileged:1.27-alpine AS production
+FROM nginxinc/nginx-unprivileged:1.29-alpine AS production
 COPY docker/nginx.conf /etc/nginx/templates/default.conf.template
 ENV API_UPSTREAM=api:5000
 COPY --from=builder /app/dist /usr/share/nginx/html
