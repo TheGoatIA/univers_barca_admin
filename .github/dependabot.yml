@@ -1,0 +1,75 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Africa/Douala"
+    target-branch: "dev"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "TheGoatIA"
+    labels: ["dependabot", "admin", "dependencies"]
+    commit-message:
+      prefix: "build(deps)"
+      prefix-development: "build(deps-dev)"
+      include: "scope"
+    groups:
+      react-ecosystem:
+        patterns: ["react", "react-dom", "@types/react*", "react-router*"]
+      vite-build:
+        patterns: ["vite*", "@vitejs/*", "typescript*"]
+      ui-components:
+        patterns:
+          [
+            "@radix-ui/*",
+            "lucide-react*",
+            "tailwindcss*",
+            "class-variance-authority*",
+            "tailwind-merge*",
+            "clsx*",
+          ]
+      tanstack:
+        patterns: ["@tanstack/*"]
+      forms:
+        patterns: ["react-hook-form*", "@hookform/*", "zod*"]
+      testing:
+        patterns:
+          ["vitest*", "@vitest/*", "@testing-library/*", "jsdom*", "@playwright/*", "playwright*"]
+      lint-format:
+        patterns: ["eslint*", "@eslint/*", "typescript-eslint*", "prettier*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+      time: "06:00"
+      timezone: "Africa/Douala"
+    target-branch: "dev"
+    labels: ["dependabot", "docker"]
+    commit-message:
+      prefix: "build(docker)"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+      time: "06:00"
+      timezone: "Africa/Douala"
+    target-branch: "dev"
+    labels: ["dependabot", "ci-cd"]
+    commit-message:
+      prefix: "ci(deps)"
+    groups:
+      actions:
+        patterns: ["*"]

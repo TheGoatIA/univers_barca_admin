@@ -1,0 +1,88 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource/barlow-condensed/600.css';
+@import '@fontsource/barlow-condensed/700.css';
+@import '@fontsource/barlow-condensed/800.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Tokens du design system Univers Barça (identiques à l'app mobile) ── */
+:root {
+  --primary: #a50044;
+  --primary-ink: #ffffff;
+  --primary-press: #8a0039;
+  --secondary: #004d98;
+  --secondary-ink: #ffffff;
+  --accent: #edbb00;
+  --accent-ink: #1a1a2e;
+  --bg: #ffffff;
+  --surface: #f7f7f9;
+  --surface-2: #ffffff;
+  --surface-3: #efeff3;
+  --text: #1a1a2e;
+  --text-2: #595959;
+  --text-3: #8a8a98;
+  --line: #e6e6ec;
+  --line-strong: #cfcfd9;
+  --success: #1e8e5a;
+  --error: #d64545;
+  --warning: #e0a400;
+  --info: #004d98;
+  --scrim: rgba(26, 26, 46, 0.46);
+  --shadow-1: 0 1px 2px rgba(26, 26, 46, 0.05), 0 2px 8px rgba(26, 26, 46, 0.05);
+  --shadow-2: 0 2px 6px rgba(26, 26, 46, 0.06), 0 12px 32px rgba(26, 26, 46, 0.1);
+  --shadow-3: 0 8px 24px rgba(26, 26, 46, 0.14), 0 24px 64px rgba(26, 26, 46, 0.16);
+  --hero: linear-gradient(135deg, #6b0030 0%, #a50044 46%, #004d98 130%);
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --primary: #c4265e;
+  --primary-press: #aa1e50;
+  --secondary: #4c86c9;
+  --secondary-ink: #0b1626;
+  --bg: #121218;
+  --surface: #1e1e27;
+  --surface-2: #252531;
+  --surface-3: #2c2c39;
+  --text: #f2f2f5;
+  --text-2: #a0a0ae;
+  --text-3: #757584;
+  --line: #2c2c39;
+  --line-strong: #3b3b4b;
+  --success: #3cbe82;
+  --error: #e86c6c;
+  --warning: #f0c24b;
+  --info: #4c86c9;
+  --scrim: rgba(0, 0, 0, 0.62);
+  --shadow-1: 0 0 0 1px rgba(255, 255, 255, 0.03);
+  --shadow-2: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 12px 32px rgba(0, 0, 0, 0.4);
+  --shadow-3: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 24px 64px rgba(0, 0, 0, 0.6);
+  --hero: linear-gradient(135deg, #7a1b44 0%, #b02156 46%, #2c5b99 130%);
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-bg font-body text-[15px] text-content antialiased;
+    font-feature-settings: 'cv11', 'ss03';
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-title font-bold uppercase tracking-wide;
+  }
+  :focus-visible {
+    @apply outline outline-[3px] outline-offset-2 outline-secondary;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

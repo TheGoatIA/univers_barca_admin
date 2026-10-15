@@ -1,0 +1,176 @@
+name: Admin Deploy
+
+on:
+  push:
+    branches: [dev, main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  packages: write
+
+concurrency:
+  group: admin-deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  IMAGE_NAME: ghcr.io/thegoatia/univers_barca_admin
+
+jobs:
+  build-check:
+    name: Vérification (lint, types, tests, build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+  docker:
+    name: Version & image Docker
+    needs: build-check
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      env_name: ${{ steps.version.outputs.env_name }}
+      image: ${{ steps.version.outputs.image }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Calcul de la version (YYYYMMDD.N)
+        id: version
+        run: |
+          git fetch --tags --force
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then ENV_NAME="prod"; else ENV_NAME="staging"; fi
+          DATE=$(date -u +%Y%m%d)
+          LAST=$( (git tag -l "v${DATE}.*" "staging-${DATE}.*" || true) | sed -E "s/^(v|staging-)${DATE}\.//" | sort -n | tail -1)
+          VERSION="${DATE}.$(( ${LAST:-0} + 1 ))"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "env_name=${ENV_NAME}" >> "$GITHUB_OUTPUT"
+          echo "image=${IMAGE_NAME}:${ENV_NAME}-${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "### Version ${VERSION} (${ENV_NAME})" >> "$GITHUB_STEP_SUMMARY"
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build & push (VITE_* injectées au build)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          target: production
+          push: true
+          build-args: |
+            VITE_API_URL=/api/v1
+            VITE_ENV=${{ steps.version.outputs.env_name }}
+          tags: |
+            ${{ steps.version.outputs.image }}
+            ${{ env.IMAGE_NAME }}:${{ steps.version.outputs.env_name }}-latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - name: Scan Trivy de l'image (non bloquant)
+        uses: aquasecurity/trivy-action@master
+        continue-on-error: true
+        with:
+          image-ref: ${{ steps.version.outputs.image }}
+          severity: CRITICAL
+          ignore-unfixed: true
+          exit-code: "0"
+      - name: Tag git du staging
+        if: github.ref == 'refs/heads/dev'
+        run: |
+          git tag -a "staging-${{ steps.version.outputs.version }}" -m "Staging build ${{ steps.version.outputs.version }}"
+          git push origin "staging-${{ steps.version.outputs.version }}"
+
+  deploy:
+    name: Déploiement VPS (${{ needs.docker.outputs.env_name }})
+    needs: docker
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}
+    steps:
+      - name: Vérifier la configuration du VPS
+        id: vps
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+        run: |
+          if [ -z "$VPS_HOST" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Secrets VPS absents : image publiée, déploiement SSH ignoré (voir docs/DEPLOYMENT.md)."
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.vps.outputs.configured == 'true'
+      - name: Déployer via SSH (avec rollback automatique)
+        if: steps.vps.outputs.configured == 'true'
+        uses: appleboy/ssh-action@v1.2.5
+        env:
+          IMAGE: ${{ needs.docker.outputs.image }}
+          TARGET: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}
+          GH_USER: ${{ github.actor }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT || 22 }}
+          envs: IMAGE,TARGET,GH_USER,GH_TOKEN
+          script_stop: true
+          script: |
+            set -e
+            BASE=/var/www/univers-barca
+            if [ "$TARGET" = "production" ]; then PORT=8081; BRANCH=main; else PORT=8082; BRANCH=dev; fi
+            COMPOSE="docker compose -f $BASE/admin/docker/docker-compose.$TARGET.yml"
+            CT="ub-$TARGET-admin"
+            cd $BASE/admin
+            git fetch "https://$GH_USER:$GH_TOKEN@github.com/TheGoatIA/univers_barca_admin.git" "$BRANCH"
+            git reset --hard FETCH_HEAD
+            echo "$GH_TOKEN" | docker login ghcr.io -u "$GH_USER" --password-stdin
+            PREV_IMAGE=$(docker inspect --format='{{.Config.Image}}' $CT 2>/dev/null || true)
+            docker pull "$IMAGE"
+            ADMIN_IMAGE="$IMAGE" $COMPOSE up -d --force-recreate admin
+            for i in $(seq 1 12); do
+              sleep 5
+              curl -sf http://127.0.0.1:$PORT/healthz > /dev/null 2>&1 && { echo "✅ Déploiement OK"; docker image prune -f >/dev/null; exit 0; }
+            done
+            echo "❌ Health check en échec"; docker logs $CT --tail 50 || true
+            if [ -n "$PREV_IMAGE" ]; then
+              echo "↩️ Rollback vers $PREV_IMAGE"
+              ADMIN_IMAGE="$PREV_IMAGE" $COMPOSE up -d --force-recreate admin
+            fi
+            exit 1
+
+  release-tag:
+    name: Tag de release production
+    needs: [docker, deploy]
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          git tag -a "v${{ needs.docker.outputs.version }}" -m "Production release ${{ needs.docker.outputs.version }}"
+          git push origin "v${{ needs.docker.outputs.version }}"
+
+  notify:
+    name: Notification Slack
+    needs: [docker, deploy]
+    if: always() && needs.docker.result != 'skipped'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slack (si SLACK_WEBHOOK_URL est défini)
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          STATUS: ${{ needs.deploy.result }}
+        run: |
+          [ -z "$SLACK_WEBHOOK_URL" ] && { echo "Slack non configuré"; exit 0; }
+          ICON=$([ "$STATUS" = "success" ] && echo "✅" || echo "❌")
+          jq -n --arg t "$ICON Admin ${{ needs.docker.outputs.env_name }} ${{ needs.docker.outputs.version }} — $STATUS ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" '{text:$t}' \
+            | curl -sf -X POST -H 'Content-type: application/json' --data @- "$SLACK_WEBHOOK_URL"

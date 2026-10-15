@@ -1,0 +1,32 @@
+# Back-office (production) — servi par nginx derrière le reverse proxy TLS du VPS.
+name: univers-barca-admin-production
+
+networks:
+  # Réseau de l'API (production) créé par univers_barca_api : permet le proxy /api sans exposer l'API
+  api:
+    external: true
+    name: univers-barca-production_public
+
+services:
+  admin:
+    image: ${ADMIN_IMAGE:-ghcr.io/thegoatia/univers_barca_admin:prod-latest}
+    container_name: ub-production-admin
+    environment:
+      API_UPSTREAM: ub-production-api:5000
+    ports:
+      - "127.0.0.1:8081:8080"
+    networks: [api]
+    restart: unless-stopped
+    read_only: true
+    tmpfs: [/tmp, /var/cache/nginx, /etc/nginx/conf.d]
+    security_opt: ["no-new-privileges:true"]
+    deploy:
+      resources:
+        limits: { memory: 128M, cpus: "0.25" }
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging: { driver: json-file, options: { max-size: "10m", max-file: "3" } }
